@@ -20,16 +20,27 @@ public class HomeController extends BaseController
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	/**
-	 * Simply selects the home view to render by returning its name.
+	 * Return landing page
 	 */
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(value =
+	{ "/landing", "/" }, method = RequestMethod.GET)
 	public ModelAndView home(HttpSession session)
 	{
-		ModelAndView mav = new ModelAndView();
-
+		ModelAndView mav = new ModelAndView("landing");
+		bindLandingModules(mav);
 		bindContentToView(mav);
+
+		Object studentId = session.getAttribute("studentName");
+		if (studentId != null && studentId instanceof String)
+		{
+			mav.addObject((String) studentId);
+		}
 
 		return mav;
 	}
 
+	private void bindLandingModules(ModelAndView mav)
+	{	
+		
+	}
 }
