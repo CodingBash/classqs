@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 
 <spring:url value="/index" var="indexUrl" htmlEscape="true" />
@@ -53,7 +54,17 @@
 		</div>
 	</div>
 
-	<tiles:insertAttribute name="pageContent" />
+	<div class="container-fluid body-content">
+		<tiles:insertAttribute name="pageContent" />
+		<footer> <jsp:useBean id="date" class="java.util.Date" />
+		<p class="text-center">
+			&copy;
+			<fmt:formatDate value="${date}" pattern="yyyy" />
+			- ClassQs
+		</p>
+		</footer>
+	</div>
+
 
 	<!-- BOOTSTRAP SCRIPT -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
