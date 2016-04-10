@@ -23,10 +23,10 @@ public class HomeController extends BaseController
 	 * Return landing page
 	 */
 	@RequestMapping(value =
-	{ "/landing", "/" }, method = RequestMethod.GET)
+	{ "/landing", "/", "index", "home" }, method = RequestMethod.GET)
 	public ModelAndView home(HttpSession session)
 	{
-		ModelAndView mav = new ModelAndView("landing");
+		ModelAndView mav = new ModelAndView("index");
 		bindLandingModules(mav);
 		bindContentToView(mav);
 
@@ -40,7 +40,7 @@ public class HomeController extends BaseController
 	}
 
 	private void bindLandingModules(ModelAndView mav)
-	{	
-		
+	{
+
 	}
 }
