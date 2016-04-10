@@ -56,13 +56,14 @@
 
 	<div class="container-fluid body-content">
 		<tiles:insertAttribute name="pageContent" />
-		<footer> <jsp:useBean id="date" class="java.util.Date" />
-		<p class="text-center">
-			&copy;
-			<fmt:formatDate value="${date}" pattern="yyyy" />
-			- ClassQs
-		</p>
-		</footer>
+		<div class="footer">
+			<jsp:useBean id="date" class="java.util.Date" />
+			<p class="text-center">
+				&copy;
+				<fmt:formatDate value="${date}" pattern="yyyy" />
+				- ClassQs
+			</p>
+		</div>
 	</div>
 
 

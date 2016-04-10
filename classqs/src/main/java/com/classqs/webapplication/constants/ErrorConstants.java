@@ -8,7 +8,7 @@ package com.classqs.webapplication.constants;
  */
 public class ErrorConstants
 {
-	public static final String error1x001 = "Error: ID is invalid";
-	public static final String error1x002 = "Error: Unable to retrieve user information";
-	public static final String error1x003 = "Error: Unexpected error";
+	public static final String error1x000001 = "Error: Parameter is invalid (error 1x000001)";
+	public static final String error1x000002 = "Error: Unable to retrieve information (error 1x000002)";
+	public static final String error1x000003 = "Error: Unexpected error (error 1x000002)";
 }
